@@ -1,0 +1,8 @@
+** LIGHT SKY BLUE CSS3 BUTTONS
+
+- Inspired and downloaded the psd from http://365psd.com/day/211
+- Converted them to html/css3 from its psd
+- Mainly for practice and experimenting
+- Goals: to achieve same look !
+
+///////////////////////////////////////////////////////
