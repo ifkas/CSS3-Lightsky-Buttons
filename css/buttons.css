@@ -2,8 +2,8 @@
 /*
  Author: Ivo Culic - ifkas
  Author URI: http://www.tajfa.com
- Item URI: http://www.tajfa.com/css3buttonsmacedonia
- Item Name: 
+ Item URI: http://www.tajfa.com/primeri/css3lightskybluebutton
+ Item Name: Lightsky Blue CSS3 Buttons
  Purpose: Practice to style with CSS3
  Version: 1.0
 */
@@ -12,11 +12,16 @@
  TOC
   00 - Resets
   01 - General
-  02 - Button etc tuka dopisi
-  03 - TODO separate the focus as is general (position of it etc)
+  02 - Button
+    01- main
+    02- text shadows
+    03- gradients
+    04- borders
+    05- box shadows
+    06- hover
+    07- focus,active
+  03 - TODO separate the focus as is general, or separate the colors from general (position of it etc)
 */
-
-
 
 /*
    ===============================
@@ -63,7 +68,7 @@ body {
 }
 
 .box {
-
+    /* Left as option */
 }
 
 /*
@@ -92,15 +97,7 @@ a.button {
     background-image: -moz-linear-gradient(bottom, #8DCCF6 10%, #CCE8FB 78%, #DEF0FC 93%);
     background-image: -webkit-linear-gradient(bottom, #8DCCF6 10%, #CCE8FB 78%, #DEF0FC 93%);
     background-image: -ms-linear-gradient(bottom, #8DCCF6 10%, #CCE8FB 78%, #DEF0FC 93%);
-
-    background-image: -webkit-gradient(
-            linear,
-            left bottom,
-            left top,
-            color-stop(0.1, #8DCCF6),
-            color-stop(0.78, #CCE8FB),
-            color-stop(0.93, #DEF0FC)
-    );
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.1, #8DCCF6), color-stop(0.78, #CCE8FB),color-stop(0.93, #DEF0FC));
 
     /* Border */
     border: 2px solid #acdaf8;
@@ -112,27 +109,19 @@ a.button {
     /* Box Shadows */
     box-shadow: 0 8px #e3e3e3, inset 0 -1px #0c588b, inset 0 -8px #2fa2ee, inset 0 -10px #c9e7fa, inset 0 1px #f2f7fa;
     
-    /* Fixing the bleed edges of corners 
+    /* Fixing the bleed edges of corners  */
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
-    background-clip: padding-box;*/
+    background-clip: padding-box;
 }
 
 a.button:hover {
-background-image: linear-gradient(bottom, #ACDAF8 2%, #EBF6FD 64%);
-background-image: -o-linear-gradient(bottom, #ACDAF8 2%, #EBF6FD 64%);
-background-image: -moz-linear-gradient(bottom, #ACDAF8 2%, #EBF6FD 64%);
-background-image: -webkit-linear-gradient(bottom, #ACDAF8 2%, #EBF6FD 64%);
-background-image: -ms-linear-gradient(bottom, #ACDAF8 2%, #EBF6FD 64%);
-
-background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.02, #ACDAF8),
-	color-stop(0.64, #EBF6FD)
-);
-
+    background-image: linear-gradient(bottom, #ACDAF8 2%, #EBF6FD 64%);
+    background-image: -o-linear-gradient(bottom, #ACDAF8 2%, #EBF6FD 64%);
+    background-image: -moz-linear-gradient(bottom, #ACDAF8 2%, #EBF6FD 64%);
+    background-image: -webkit-linear-gradient(bottom, #ACDAF8 2%, #EBF6FD 64%);
+    background-image: -ms-linear-gradient(bottom, #ACDAF8 2%, #EBF6FD 64%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.02, #ACDAF8), color-stop(0.64, #EBF6FD));
 }
 
 a.button:active, a.button:focus {
@@ -141,39 +130,18 @@ a.button:active, a.button:focus {
     top: 2px;
     
     background-image: linear-gradient(bottom, #107FC9 37%, #0B578A 89%);
-background-image: -o-linear-gradient(bottom, #107FC9 37%, #0B578A 89%);
-background-image: -moz-linear-gradient(bottom, #107FC9 37%, #0B578A 89%);
-background-image: -webkit-linear-gradient(bottom, #107FC9 37%, #0B578A 89%);
-background-image: -ms-linear-gradient(bottom, #107FC9 37%, #0B578A 89%);
+    background-image: -o-linear-gradient(bottom, #107FC9 37%, #0B578A 89%);
+    background-image: -moz-linear-gradient(bottom, #107FC9 37%, #0B578A 89%);
+    background-image: -webkit-linear-gradient(bottom, #107FC9 37%, #0B578A 89%);
+    background-image: -ms-linear-gradient(bottom, #107FC9 37%, #0B578A 89%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.37, #107FC9), color-stop(0.89, #0B578A));
 
-background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.37, #107FC9),
-	color-stop(0.89, #0B578A)
-);
+    box-shadow: 0 3px #e3e3e3, inset 0 -1px #45a0dc, inset 0 1px #2384c5, inset -1px 0 #4dafef, inset 1px 0 #4dafef; /* Adding multiple shadows 5 sides, 1 outer and 4 inner */
 
-box-shadow: 0 3px #e3e3e3, inset 0 -1px #45a0dc, inset 0 1px #2384c5, inset -1px 0 #4dafef, inset 1px 0 #4dafef; /* Adding multiple shadows 5 sides, 1 outer and 4 inner */
+    color: #0b578a;
+    text-shadow: 0 1px 0 #57a9df, 0 1px 0 #57a9df;
 
-color: #0b578a;
-text-shadow: 0 1px 0 #57a9df, 0 1px 0 #57a9df;
+    border: 1px solid #135b8c;
 
-border: 1px solid #135b8c;
-
-}
-
-a.darkpurple {
-	color: #50041C;
-	text-shadow: 0 1px 0 #EE296E;
-	/*border-color: #FF639A #C30D53 #F40858 #C30D53;*/u
-	
-	background: rgb(232,15,129); /* Old browsers */
-	background: -moz-linear-gradient(top, rgb(232,15,129) 8%, rgb(155,4,37) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(8%,rgb(232,15,129)), color-stop(100%,rgb(155,4,37))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgb(232,15,129) 8%,rgb(155,4,37) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgb(232,15,129) 8%,rgb(155,4,37) 100%); /* Opera11.10+ */
-	background: -ms-linear-gradient(top, rgb(232,15,129) 8%,rgb(155,4,37) 100%); /* IE10+ */
-	background: linear-gradient(top, rgb(232,15,129) 8%,rgb(155,4,37) 100%); /* W3C */
 }
 /* EOF */
